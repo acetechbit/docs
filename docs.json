@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "white",
+  "theme": "maple",
   "name": "AceBit API Documentation",
   "colors": {
     "primary": "#16A34A",
