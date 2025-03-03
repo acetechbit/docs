@@ -1,4 +1,19 @@
 ---
-title: 'Wallets'
-openapi: 'POST /wallets/create'
+title: "Wallets API"
+description: "Endpoints for managing user wallets, including creation and retrieval."
 ---
+
+# Wallets API
+
+The Wallets API allows users to create, retrieve, and manage their cryptocurrency and fiat wallets within the AceBit platform.
+
+## Authentication
+
+All endpoints require Bearer Token authentication.
+
+## Endpoints
+
+### Create Multiple Wallets
+
+```http
+POST /wallets/create
