@@ -47,7 +47,7 @@
             "group": "Endpoint Examples",
             "pages": [
               "api-reference/endpoint/wallets",
-              "api-reference/endpoint/delete",
+              "api-reference/endpoint/delete"
             ]
           }
         ]
