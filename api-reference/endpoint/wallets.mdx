@@ -1,19 +1,153 @@
 ---
-title: "Wallets API"
-description: "Endpoints for managing user wallets, including creation and retrieval."
+title: Wallets API Documentation
+description: Manage crypto and fiat wallets using the Wallets API.
+lastUpdated: March 2025
 ---
 
-# Wallets API
-
-The Wallets API allows users to create, retrieve, and manage their cryptocurrency and fiat wallets within the AceBit platform.
+# Overview
+This section provides details on how to manage crypto and fiat wallets using the Wallets API.
 
 ## Authentication
+All endpoints require authentication using a Bearer Token.
 
-All endpoints require Bearer Token authentication.
+# Endpoints
 
-## Endpoints
+## Create Multiple Wallets
+**Endpoint:**  
+`POST /wallets/create`
 
-### Create Multiple Wallets
+**Description:**  
+Creates multiple wallets for a user.
 
-```http
-POST /wallets/create
+**Security:**  
+Requires Bearer Token authentication.
+
+**Responses:**
+
+```json
+{
+  "success": true,
+  "message": "Wallets created successfully",
+  "wallets": [
+    {
+      "walletId": "btc-wallet-abc123",
+      "asset": "BTC",
+      "balance": "0.0325"
+    }
+  ]
+}
+```
+
+---
+
+## Create Wallet for a Specific Asset
+**Endpoint:**  
+`POST /wallets/create/{asset}`
+
+**Description:**  
+Creates a wallet for a specific asset (e.g., BTC, ETH, TRX).
+
+**Security:**  
+Requires Bearer Token authentication.
+
+**Parameters:**
+
+- `asset` (string) - The cryptocurrency asset (e.g., BTC, ETH, TRX).
+
+**Responses:**
+
+```json
+{
+  "success": true,
+  "wallet": {
+    "walletId": "eth-wallet-xyz789",
+    "asset": "ETH",
+    "balance": "1.5000"
+  }
+}
+```
+
+---
+
+## Get All Wallets
+**Endpoint:**  
+`GET /wallets`
+
+**Description:**  
+Retrieves all wallets (crypto and fiat) for the authenticated user.
+
+**Security:**  
+Requires Bearer Token authentication.
+
+**Query Parameters:**
+
+_None_
+
+**Responses:**
+
+```json
+{
+  "cryptoWallets": [
+    {
+      "id": 1,
+      "walletId": "btc-wallet-abc123",
+      "asset": "BTC",
+      "balance": "0.0325",
+      "address": "67423eb2159cfe1ab70b31ea32fb781b",
+      "createdAt": "2023-11-23T20:44:36.008Z",
+      "updatedAt": "2023-11-23T23:09:14.810Z"
+    }
+  ],
+  "fiatWallets": [
+    {
+      "id": 1,
+      "currency": "USD",
+      "balance": 500.50,
+      "userId": 101,
+      "createdAt": "2023-10-01T12:00:00.000Z",
+      "updatedAt": "2023-10-05T08:15:00.000Z"
+    }
+  ]
+}
+```
+
+---
+
+# Schemas
+
+## SanitizedWallet
+```json
+{
+  "id": 1,
+  "walletId": "btc-wallet-abc123",
+  "asset": "BTC",
+  "balance": "0.0325",
+  "address": "67423eb2159cfe1ab70b31ea32fb781b",
+  "createdAt": "2023-11-23T20:44:36.008Z",
+  "updatedAt": "2023-11-23T23:09:14.810Z"
+}
+```
+
+## FiatWallet
+```json
+{
+  "id": 1,
+  "currency": "USD",
+  "balance": 500.50,
+  "userId": 101,
+  "createdAt": "2023-10-01T12:00:00.000Z",
+  "updatedAt": "2023-10-05T08:15:00.000Z"
+}
+```
+
+---
+
+# Notes
+- Ensure the user is authenticated before calling any endpoint.
+- Use appropriate error handling to manage responses.
+- Use path parameters correctly when creating a wallet for a specific asset.
+
+---
+
+**Author:**  
+_Last updated: March 2025_
