@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "https://api.wallets.example.com"
+      "url": "http://payments.acebit.co"
     }
   ],
   "security": [
