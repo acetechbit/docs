@@ -19,6 +19,106 @@
     }
   ],
   "paths": {
+    "/payments/buy/initiate": {
+      "post": {
+        "summary": "Initiate Payment",
+        "description": "Generates a payment link using the 'TransactWorld' gateway.",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": {
+          "description": "Payment initiation details",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Payment link generated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/payments/buy/history": {
+      "get": {
+        "summary": "Retrieve Payment History",
+        "description": "Retrieves sanitized payment history for the authenticated user.",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentHistory"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/payments/sell/estimate": {
+      "post": {
+        "summary": "Estimate Sell Cost",
+        "description": "Estimates the cost of selling an asset to fiat currency.",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SellEstimateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Estimated sell cost",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SellEstimateResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/payments/sell": {
+      "post": {
+        "summary": "Process Asset Sale",
+        "description": "Processes a sell request for converting a cryptocurrency asset to fiat.",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SellRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sell transaction processed successfully"
+          }
+        }
+      }
+    },
     "/wallets": {
       "get": {
         "description": "Retrieves all wallets (crypto and fiat) for the authenticated user.",

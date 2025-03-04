@@ -23,23 +23,23 @@
                     {
                         "group": "Buying",
                         "pages": [
-                          "api-reference/buysell/initiate",
-                          "api-reference/buysell/history"
+                          "api-reference/buy/initiate",
+                          "api-reference/buy/history"
                         ]
                       },
                       {
                         "group": "Selling",
                         "pages": [
-                          "api-reference/buysell/estimate",
-                         "api-reference/buysell/process",
-                          "api-reference/buysell/history"
+                          "api-reference/sell/estimate",
+                         "api-reference/sell/process",
+                          "api-reference/sell/history"
                         ]
                       },
                       {
                         "group": "Fiat Withdrawals",
                         "pages": [
-                          "api-reference/buysell/request",
-                          "api-reference/buysell/requests"
+                          "api-reference/fiat/request",
+                          "api-reference/fiat/requests"
                         ]
                       }
                 ]
