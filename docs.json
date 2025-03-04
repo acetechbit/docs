@@ -30,9 +30,9 @@
                       {
                         "group": "Selling",
                         "pages": [
-                          "api-reference/sell/estimate",
-                         "api-reference/sell/process",
-                          "api-reference/sell/history"
+                          "api-reference/endpoint/sell-estimate",
+                         "api-reference/endpoint/sell-process",
+                          "api-reference/endpoint/sell-history"
                         ]
                       },
                       {

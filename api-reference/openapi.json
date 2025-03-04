@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "http://payments.acebit.co"
+      "url": "https://payments.acebit.co"
     }
   ],
   "security": [
