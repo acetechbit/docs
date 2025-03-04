@@ -56,7 +56,7 @@
         }
     },
     "logo": {
-        "light": "/logo/acebit-lightmode1.png",
+        "light": "/logo/acebit-lightmode.svg",
         "dark": "/logo/acebit-new-logo.webp"
     },
     "navbar": {
