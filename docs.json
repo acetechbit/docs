@@ -13,12 +13,7 @@
       {
         "tab": "API Reference",
         "groups": [
-          {
-            "group": "Buy/sell Endpoint",
-            "pages": [
-              "api-reference/buysell/buysell"
-            ]
-          },
+          
           {
             "group": "Wallets Endpoint",
             "pages": [
