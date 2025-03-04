@@ -23,8 +23,8 @@
                     {
                         "group": "Buying",
                         "pages": [
-                          "api-reference/buy-initiate",
-                          "api-reference/buy-history"
+                          "api-reference/endpoint/buy-initiate",
+                          "api-reference/endpoint/buy-history"
                         ]
                       },
                       {
