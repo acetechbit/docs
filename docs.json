@@ -21,11 +21,27 @@
                         ]
                     },
                     {
-                        "group": "Buy/sell Endpoint",
+                        "group": "Buying",
                         "pages": [
-                            "api-reference/buysell/buysell"
+                          "api-reference/buysell/initiate",
+                          "api-reference/buysell/history"
                         ]
-                    }
+                      },
+                      {
+                        "group": "Selling",
+                        "pages": [
+                          "api-reference/buysell/estimate",
+                         "api-reference/buysell/process",
+                          "api-reference/buysell/history"
+                        ]
+                      },
+                      {
+                        "group": "Fiat Withdrawals",
+                        "pages": [
+                          "api-reference/buysell/request",
+                          "api-reference/buysell/requests"
+                        ]
+                      }
                 ]
             }
         ],
