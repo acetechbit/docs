@@ -1,68 +1,66 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "AceBit API Documentation",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
-  },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "Wallets Endpoint",
-            "pages": [
-              "api-reference/endpoint/wallets",
-              "api-reference/endpoint/wallets-specific"
+    "$schema": "https://mintlify.com/docs.json",
+    "theme": "mint",
+    "name": "AceBit API Documentation",
+    "colors": {
+        "primary": "#16A34A",
+        "light": "#07C983",
+        "dark": "#15803D"
+    },
+    "favicon": "/favicon.svg",
+    "navigation": {
+        "tabs": [
+            {
+                "tab": "API Reference",
+                "groups": [
+                    {
+                        "group": "Wallets Endpoint",
+                        "pages": [
+                            "api-reference/endpoint/wallets",
+                            "api-reference/endpoint/wallets-specific"
+                        ]
+                    },
+                    {
+                        "group": "Buy/sell Endpoint",
+                        "pages": [
+                            "api-reference/buysell/buysell"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "global": {
+            "anchors": [
+                {
+                    "anchor": "ACEBIT Swagger",
+                    "href": "https://payments.acebit.co/api-docs/",
+                    "icon": "book-open-cover"
+                }
             ]
-          },
-          {
-            "group": "Buy/sell Endpoint",
-            "pages": [
-              "api-reference/buysell/buysell"
-            ]
-          },
-        ]
-      },
-      
-    ],
-    
-    "global": {
-      "anchors": [
-        {
-          "anchor": "ACEBIT Swagger",
-          "href": "https://payments.acebit.co/api-docs/",
-          "icon": "book-open-cover"
         }
-      ]
+    },
+    "logo": {
+        "light": "/logo/light.svg",
+        "dark": "/logo/dark.svg"
+    },
+    "navbar": {
+        "links": [
+            {
+                "label": "Support",
+                "href": "mailto:tech@acebit.co"
+            }
+        ],
+        "primary": {
+            "type": "button",
+            "label": "ACEBIT",
+            "href": "https://acebit.co"
+        }
+    },
+    "footer": {
+        "socials": {
+            "x": "https://x.com/acebit",
+            "github": "https://github.com/acebit",
+            "linkedin": "https://linkedin.com/company/acebit"
+        }
     }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:tech@acebit.co"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "ACEBIT",
-      "href": "https://acebit.co"
-    }
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/acebit",
-      "github": "https://github.com/acebit",
-      "linkedin": "https://linkedin.com/company/acebit"
-    }
-  }
 }
