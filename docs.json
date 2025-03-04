@@ -14,13 +14,13 @@
         "tab": "API Reference",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Buy/sell Endpoint",
             "pages": [
-              "api-reference/introduction"
+              "api-reference/buysell/buysell"
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Wallets Endpoint",
             "pages": [
               "api-reference/endpoint/wallets",
               "api-reference/endpoint/wallets-specific"
