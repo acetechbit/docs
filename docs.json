@@ -19,9 +19,16 @@
               "api-reference/endpoint/wallets",
               "api-reference/endpoint/wallets-specific"
             ]
-          }
+          },
+          {
+            "group": "Buy/sell Endpoint",
+            "pages": [
+              "api-reference/buysell/buysell"
+            ]
+          },
         ]
-      }
+      },
+      
     ],
     
     "global": {
